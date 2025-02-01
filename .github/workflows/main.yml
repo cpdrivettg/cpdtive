@@ -1,7 +1,9 @@
 name: 复制用户
 
 on:
-  workflow_dispatch:
+  schedule:
+    - cron: '0 */7 * * *'  # 每 4 小时运行一次
+  workflow_dispatch:  # 允许手动触发
 
 jobs:
   copy-users:
